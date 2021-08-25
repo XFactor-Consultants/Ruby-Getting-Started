@@ -1,0 +1,49 @@
+$border-radius: 4px;
+
+html, body {
+  background-color: black;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  
+  h1 {
+    font-size: 2.5em;
+  }
+  .description {
+    background-color: rgba(255, 255, 255, 0.199);
+    padding: 1em;
+    font-size: 1.2em;
+    border-radius: $border-radius;
+    max-width: 600px;
+  }
+  .meta {
+    display: flex;
+    * {
+      background-color: rgba(255, 255, 0, 0.295);
+      margin: 5px;
+      padding: 5px;
+      border-radius: $border-radius;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+    }
+  }
+  .links {
+    margin-top: 10px;
+    a {
+      color: white;
+      border-radius: $border-radius;
+      font-weight: bold;
+      background-color: rgb(31, 55, 133);
+      margin: 5px;
+      padding: 5px;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
