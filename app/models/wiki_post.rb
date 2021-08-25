@@ -1,0 +1,2 @@
+class WikiPost < ApplicationRecord
+end

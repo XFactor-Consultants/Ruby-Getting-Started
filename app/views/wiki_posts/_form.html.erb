@@ -1,0 +1,17 @@
+<%= form_with(model: wiki_post) do |form| %>
+  <% if wiki_post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(wiki_post.errors.count, "error") %> prohibited this wiki_post from being saved:</h2>
+
+      <ul>
+        <% wiki_post.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
