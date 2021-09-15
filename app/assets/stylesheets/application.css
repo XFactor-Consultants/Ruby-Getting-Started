@@ -15,9 +15,17 @@
  */
 html, body {
   margin: 0;
-  
-  background-color: black;
+  background-color: #3A3A3A;
 }
 body * {
   color:white;
+}
+input {
+  color: black;
+}
+
+.links * {
+  color: white;
+  margin: 0 2px;
+  font-size: 1.5em;
 }

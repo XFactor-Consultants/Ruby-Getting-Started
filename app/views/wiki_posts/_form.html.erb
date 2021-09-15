@@ -1,4 +1,4 @@
-<%= form_with(model: wiki_post) do |form| %>
+<%= form_with(model: wiki_post, html: {class: 'show'} ) do |form| %>
   <% if wiki_post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(wiki_post.errors.count, "error") %> prohibited this wiki_post from being saved:</h2>
@@ -10,6 +10,20 @@
       </ul>
     </div>
   <% end %>
+  <div>
+    <%= form.label :title, "Post title" %>
+    <%= form.text_field :title%>
+  </div>
+  <hr/>
+
+  <%= form.label :image, "Post image" %>
+  <%= form.file_field :image%>
+
+  <%= form.label :title, "Post description" %>
+  <%= form.text_field :description%>
+
+  <%= form.label :title, "What is your name?" %>
+  <%= form.text_field :author%>
 
   <div class="actions">
     <%= form.submit %>

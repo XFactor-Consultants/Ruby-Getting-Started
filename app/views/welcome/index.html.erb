@@ -1,11 +1,10 @@
-<h1>Wiki</h1>
-<div>
-  <% @posts.each do |post| %>
-    <p>
-      <h4><%= post.title %></h4>
-      <%= link_to "View", wiki_post_path(post), class: 'wikiLink' %>
-    </p>
-  <% end %>
+<h1>Wiki App</h1>
+
+<div class="links">
+  <%= link_to "About", welcome_about_path %>|
+  <%= link_to "New post", new_wiki_post_path %>
 </div>
 
-<%= link_to "About", welcome_about_path %>
+<%= render 'wiki_posts/list', wiki_posts: @wiki_posts %>
+
+

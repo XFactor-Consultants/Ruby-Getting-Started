@@ -41,7 +41,7 @@ class WikiPostsController < ApplicationController
   def update
     respond_to do |format|
       if @wiki_post.update(wiki_post_params)
-        format.html { redirect_to @wiki_post, notice: "Wiki post was successfully updated." }
+        format.html { redirect_to @wiki_post, notice: "You updated wiki post "+"\""+@wiki_post.title+"\"" }
         format.json { render :show, status: :ok, location: @wiki_post }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -67,6 +67,6 @@ class WikiPostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def wiki_post_params
-      params.fetch(:wiki_post, {})
+      params.fetch(:wiki_post, {}).permit(:title, :description, :image, :author)
     end
 end

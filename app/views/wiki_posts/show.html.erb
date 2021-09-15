@@ -1,7 +1,28 @@
 <p id="notice"><%= notice %></p>
 
+<div class="links">
+  <%= link_to "Home", welcome_index_path %>|
+  <%= link_to "About", welcome_about_path %>
+</div>
 
-<%= @wiki_post.title %>
+<div class="show">
+  <div class="header">
+    <h1>
+      <%= @wiki_post.title %>
+    </h1>
+    <div class="buttons">
+      <%= link_to 'Edit', edit_wiki_post_path(@wiki_post) %>
+      <%= link_to 'Delete', wiki_post_path(@wiki_post), method: :delete %>
+    </div>
+  </div>
+  <hr/>
+  <div class="content">
+    <%= image_tag @wiki_post.image %>
+    <p>
+      <%= @wiki_post.description %>
+    </p>
+  </div>
+  <%= render 'meta', wiki_post: @wiki_post %>
+</div>
 
-<%= link_to 'Edit', edit_wiki_post_path(@wiki_post) %> |
-<%= link_to 'Back', wiki_posts_path %>
+

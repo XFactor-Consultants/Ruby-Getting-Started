@@ -1,3 +1,22 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.links {
+  display: flex;
+  color: white;
+}
+.post {
+  background-color: white;
+  border-radius: 6px;
+  padding: 2em;
+  margin-top: 10px;
+  * {
+    color: black
+  }
+  hr {
+    border-color: #707070;
+    border-width: 1px;
+    background: #707070;
+    outline: none;
+  }
+}

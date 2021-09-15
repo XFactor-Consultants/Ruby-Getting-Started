@@ -21,29 +21,107 @@ html, body {
   }
   .meta {
     display: flex;
+  }
+}
+
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 10vw;
+  .post {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    align-items: center;
+    padding: 1em;
+    border-radius: 4px;
     * {
-      background-color: rgba(255, 255, 0, 0.295);
-      margin: 5px;
-      padding: 5px;
-      border-radius: $border-radius;
-      display: flex;
-      align-items: center;
-      font-weight: bold;
+      margin: 5px 0;
+    }
+    h4 {
+      color: black;
+      margin: inherit;
+    }
+    a {
+      background-color: #337EFF;
+      color: white;
+      padding: 3px 7px;
+      border-radius: 4px;
     }
   }
-  .links {
-    margin-top: 10px;
-    a {
-      color: white;
-      border-radius: $border-radius;
-      font-weight: bold;
-      background-color: rgb(31, 55, 133);
-      margin: 5px;
-      padding: 5px;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
+}
+
+.show {
+  background: white;
+  border-radius: 6px;
+  padding: 1.5em;
+  margin-top: 2em;
+  * {
+    color: black; 
+  }
+  hr {
+    background: #707070;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      margin: 0;
+    }
+    .buttons {
+      display: flex;
+      font-size: 2em;
+      a {
+        padding: 0.5em 1em;
+        border-radius: 4px;
+        background: #FF5353;
+        color: white;
+      }
+      a:first-child {
+        background: #337EFF;
+        color: white;
+        margin-right: 10px;
       }
     }
+  }
+  
+  .content {
+    display: flex;
+    font-size: 1.2em;
+  }
+}
+
+
+img {
+  width: 300px;
+}
+
+img.thumbnail {
+  width: 100px;
+}
+
+form {
+  font-size: 1.5em;
+  label {
+    font-weight: bold;
+  }
+  input {
+    margin: 5px 0 10px 0;
+  }
+  input[type='text'] {
+    padding: 0.5em 1em;
+    background: rgba(0, 0, 0, 0.123);
+    border: none;
+    border-radius: 5px;
+  }
+  input[type='submit'] {
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    background: #337EFF;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 7px;
   }
 }
